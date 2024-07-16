@@ -1,30 +1,52 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <v-app>
+    <!-- <v-app-bar app>
+      <v-spacer></v-spacer> 
+      <v-btn text to="/">Home</v-btn>
+      <v-btn text to="/timetable">Time Table</v-btn>
+      <v-btn text to="/contact">Contact Info</v-btn>
+      <v-spacer></v-spacer>
+    </v-app-bar> -->
+    <v-main>
+      <router-view/>
+    </v-main>
+    <v-footer class="footer-background">
+    <v-row justify="center" class="footer-content">
+      <v-btn icon href="https://www.tiktok.com/@coachmarvbjj" target="_blank" class="social-icon">
+        <v-icon size="24">mdi-tiktok</v-icon>
+      </v-btn>
+      <v-btn icon href="https://www.instagram.com/coachmarvbjj/" target="_blank" class="social-icon">
+        <v-icon size="24">mdi-instagram</v-icon>
+      </v-btn>
+      <v-btn icon href="https://www.facebook.com/martyn.oliver.75" target="_blank" class="social-icon">
+        <v-icon size="24">mdi-facebook</v-icon>
+      </v-btn>
+    </v-row>
+  </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'App',
+  data: () => ({
+    //
+  }),
+}
+</script>
+<style scoped>
+.footer-background {
+  padding: 20px 0;
+  background-color: #15202b;
 }
 
-nav {
-  padding: 30px;
+.footer-content {
+  max-width: 500px;
+  margin: auto;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.social-icon {
+  margin: 0 10px;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
