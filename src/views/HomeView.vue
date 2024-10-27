@@ -12,7 +12,7 @@
     <v-expand-x-transition>
       <v-card v-show="expand2">
         <v-row justify="end">
-          <v-col cols="12" md="6" lg="4">
+          <v-col cols="12" md="8" lg="6">
             <v-card class="elevation-5 pa-3 ma-5">
               <v-card-title>What is Brazilian Jiu-Jitsu?</v-card-title>
               <v-card-text>
@@ -34,9 +34,9 @@
     <v-expand-x-transition>
       <v-card v-show="expand2">
         <v-row justify="start">
-          <v-col cols="12" md="6" lg="4">
-            <v-card class="elevation-5 pa-3 ma-5">
-              <v-card-title>Why Train?</v-card-title>
+          <v-col cols="12" md="8" lg="6">
+        <v-card class="elevation-5 pa-3 ma-5">
+          <v-card-title>Why Train?</v-card-title>
               <v-card-text>
                 <v-list>
                   <v-list-item>
@@ -115,7 +115,7 @@
       </v-card>
     </v-expand-x-transition>
 
-    <v-expand-x-transition>
+    <!-- <v-expand-x-transition>
       <v-card v-show="expand2">
         <v-row justify="end">
           <v-col cols="12" md="6" lg="4">
@@ -126,46 +126,35 @@
           </v-col>
         </v-row>
       </v-card>
-    </v-expand-x-transition>
+    </v-expand-x-transition> -->
 
     <!--add about the coach-->
     <v-expand-x-transition>
       <v-card v-show="expand2">
         <v-row justify="center">
-          <v-col cols="12" md="6" lg="4">
-            <v-card class="elevation-5 pa-3 ma-5">
+          <v-col cols="12" md="8" lg="6">
+            <v-card class="elevation-5 pa-3 ma-6">
               <v-card-title>About the Coach</v-card-title>
               <v-card-text>
                 <v-list>
                   <v-list-item>
                     <v-list-item-content>
+                      <v-img src="@/images/coach.jpg" alt="Coach Image" class="mb-3 coach-img"></v-img>
                       <v-list-item-title>Coach Name:</v-list-item-title>
-                      <v-list-item-text>John Doe</v-list-item-text>
+                      <v-list-item-text>Martyn Oliver</v-list-item-text>
                     </v-list-item-content>
                   </v-list-item>
                   <v-list-item>
                     <v-list-item-content>
-                      <v-list-item-title>Experience:</v-list-item-title>
-                      <v-list-item-text
-                        >10+ years of BJJ experience</v-list-item-text
-                      >
-                    </v-list-item-content>
-                  </v-list-item>
-                  <v-list-item>
-                    <v-list-item-content>
-                      <v-list-item-title>Rank:</v-list-item-title>
-                      <v-list-item-text>Black Belt</v-list-item-text>
-                    </v-list-item-content>
-                  </v-list-item>
-                  <v-list-item>
-                    <v-list-item-content>
-                      <v-list-item-title>Teaching Style:</v-list-item-title>
-                      <v-list-item-text
-                        >John is known for his patient and encouraging teaching
-                        style. He breaks down techniques in a way that's easy to
-                        understand and apply, making BJJ accessible to students
-                        of all levels.</v-list-item-text
-                      >
+                      <v-list-item-text>
+                        Martyn is a passionate martial artist who loves sharing his knowledge and 
+                        experience with others. His classes are more than just training sessions 
+                        they're a chance to connect with like-minded people and have fun while 
+                        learning valuable skills. Expect a relaxed, friendly atmosphere where 
+                        you'll feel right at home. He focuses on the fundamentals, but he's always 
+                        eager to explore new techniques and strategies. Whether you're a beginner 
+                        or a seasoned grappler, you'll find something exciting in every class.
+                      </v-list-item-text>
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>
@@ -175,6 +164,29 @@
         </v-row>
       </v-card>
     </v-expand-x-transition>
+
+  <v-expand-x-transition>
+  <v-row justify="space-between">
+    <v-col cols="12" md="6" lg="6">
+      <v-card class="elevation-5 pa-2 ma-2" v-show="expand2">
+        <v-img
+          src="@/images/group.jpg"
+          alt="BJJ Image"
+          class="fixed-size-img"
+        ></v-img>
+      </v-card>
+    </v-col>
+    <v-col cols="12" md="6" lg="6">
+      <v-card class="elevation-5 pa-2 ma-2" v-show="expand2">
+        <v-img
+          src="@/images/comp.jpg"
+          alt="BJJ Image"
+          class="fixed-size-img"
+        ></v-img>
+      </v-card>
+    </v-col>
+  </v-row>
+</v-expand-x-transition>
 
     <v-card class="elevation-3">
       <v-card-title class="text-center">Time Table</v-card-title>
@@ -229,6 +241,8 @@
             </v-col>
           </v-row>
         </v-card>
+        &nbsp;
+        &nbsp;
       </v-card>
     </v-card>
   </v-container>
@@ -273,7 +287,7 @@ export default defineComponent({
   },
   methods: {
     iconScrolldown() {
-      window.scrollBy(0, 2000);
+      window.scrollBy(0, 3000);
     },
   },
 });
@@ -313,5 +327,11 @@ export default defineComponent({
   60% {
     transform: translateX(-50%) translateY(-15px);
   }
+}
+
+.fixed-size-img {
+  width: 100%; /* Ensures the image takes the full width of the column */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 </style>

@@ -11,10 +11,7 @@
       <router-view/>
     </v-main>
     <v-footer class="footer-background">
-    <v-row justify="center" class="footer-content">
-      <v-btn icon href="https://www.tiktok.com/@coachmarvbjj" target="_blank" class="social-icon">
-        <v-icon size="24">mdi-tiktok</v-icon>
-      </v-btn>
+    <v-row justify="center" class="footer-content">     
       <v-btn icon href="https://www.instagram.com/coachmarvbjj/" target="_blank" class="social-icon">
         <v-icon size="24">mdi-instagram</v-icon>
       </v-btn>
